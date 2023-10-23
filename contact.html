@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+    <title>JASMINE</title>
+ </head>   
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent horizontal scrollbar due to shape divider */
+            background-color: rgba(77,50,39); /* Semi-transparent background*/
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            min-height: 100vh; /* Ensure full viewport height */
+           
+
+        }
+
+        /* Custom Shape Divider Styles */
+        .custom-shape-divider-top-1696315512 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1; /* Place it behind other elements */
+        }
+
+        .custom-shape-divider-top-1696315512 svg {
+            width: 100%;
+            height: 325px; /* Adjust the height as needed */
+            fill: #EBC999; /* Set the shape's color */
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+           
+           position: absolute;
+           top: 150px; /* Adjust the top position as needed */
+           left: 550px; /* Place on the right side */
+           z-index: 1; /* Set z-index above the shape divider */
+           padding: 10px; 
+        }   
+        .navbar a {
+            font-size: 24px;
+            font-weight: bold;
+            display: inline-block;
+            text-decoration: none;
+            color: #cd7700;
+            padding: 15px 10px;
+            font-family: 'Oswald',serif;
+
+        }
+
+        .navbar a:hover {
+            background-color: #4d3227;
+            color: white;
+            
+        }
+
+        /* Logo Styles */
+        #logo {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            left: 10px; /* Adjust the left position as needed */
+            width: 70px;
+            height: 70px;
+            z-index: 1; /* Set z-index above the shape divider */
+        }
+        .contact-container {
+            background-color: #EBC999;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            margin: 240px auto; /* Center the form horizontally */
+            
+        }
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-right: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 5px;
+            border: 1px solid#EBC999;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #cd7700;
+            color:#4d3227;
+            border: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+     
+        }
+
+        button:hover {
+            background-color: #cd7700;
+        }
+
+        #confirmation {
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+<body>
+    <!-- Custom Shape Divider -->
+    <div class="custom-shape-divider-top-1696315512">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a> 
+        <a href="About.html">About</a>
+        <a href="Project.html">Projects</a>
+    </div>
+
+    <!-- Logo -->
+    <img src="LOGO.png" alt="Logo" id="logo">
+
+    
+    <div class="contact-container">
+        <form id="contactForm">
+            <label for="name" style="font-family: 'Oswald', serif">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email" style="font-family: 'Oswald', serif">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message" style="font-family: 'Oswald', serif">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <div id="confirmation">
+            <p style="font-family: 'Oswald', serif; color: #4d3227">Thank you for your message! We will get back to you soon.</p>
+        </div>
+    </div>
+
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const confirmation = document.getElementById("confirmation");
+
+        contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            contactForm.style.display = "none";
+            confirmation.style.display = "block";
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>
+
+
+</body>
+</html>    

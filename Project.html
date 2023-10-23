@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        JASMINE
+    </title>
+</head> 
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(77, 50, 39);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            min-height: 100vh; /* Ensure full viewport height */
+            position: relative; /* Add this for the shape divider */
+    }
+
+    /* Custom Shape Divider Styles */
+    .custom-shape-divider-top-1696315512 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1; /* Place it behind other elements */
+    }
+
+    .custom-shape-divider-top-1696315512 svg {
+        width: 100%;
+        height: 325px; /* Adjust the height as needed */
+        fill: #EBC999; /* Set the shape's color */
+    }
+
+    /* Navigation Bar Styles */
+    .navbar {
+       
+        position: absolute;
+        top: 150px; /* Adjust the top position as needed */
+        left: 550px; /* Place on the right side */
+        z-index: 1; /* Set z-index above the shape divider */
+        padding: 10px;  
+    }
+    .navbar a {
+        font-size: 24px;
+        font-weight: bold;
+        display: inline-block;
+        text-decoration: none;
+        color: #cd7700;
+        padding: 15px 10px;
+        font-family: 'Oswald',serif;
+
+
+    }
+    .navbar a:hover {
+        background-color: #4d3227;
+        color: white;
+        
+    }
+    /* Logo Styles */
+    #logo {
+        position: absolute;
+        top: 10px; /* Adjust the top position as needed */
+        left: 10px; /* Adjust the left position as needed */
+        width: 70px;
+        height: 70px;
+        z-index: 1; /* Set z-index above the shape divider */
+    }
+    
+    .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: auto; /* Push the portfolio to the bottom */
+        
+        }
+
+        .project {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+            transition: background-color 0.3s;
+            top: 60px;
+        }
+
+        .project:hover {
+            background-color: #EBC999; /* Lighten the background color on hover */
+        }
+
+        .project h2 {
+            font-size: 24px;
+        }
+
+        .project p {
+            font-size: 16px;
+        }
+
+        .project a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color:#EBC999;
+            color:#4d3227;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .project a:hover {
+            background-color: #cd7700;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            width: 150px;
+            height: 150px;
+        }
+</style>
+<body>
+    <!-- Custom Shape Divider -->
+    <div class="custom-shape-divider-top-1696315512">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>       
+        <a href="contact.html">Contact</a>
+    </div>
+    <!-- Logo -->
+    <img src="LOGO.png" alt="Logo" id="logo">
+
+    <div class="portfolio">
+        <div class="project">
+            <h2>UI DESIGN</h2>
+            <p>Browse through our landing page, where you'll find all our projects available in PDF format.</p>
+            <a href="prjct1.html">See more</a>
+        </div>
+        <div class="project">
+            <h2>Graphics Design</h2>
+            <p>Welcome to my graphic design playground, where my creativity knows no bounds! I showcase a collection of graphic design projects,</p>
+            <a href="prjct2.html">Learn More</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>

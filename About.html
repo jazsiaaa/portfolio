@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        JASMINE
+    </title>
+</head> 
+<style>
+     body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent horizontal scrollbar due to shape divider */
+             background-color: rgba(77,50,39); /* Semi-transparent background*/
+        }
+
+        /* Custom Shape Divider Styles */
+        .custom-shape-divider-top-1696315512 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1; /* Place it behind other elements */
+        }
+
+        .custom-shape-divider-top-1696315512 svg {
+            width: 100%;
+            height: 325px; /* Adjust the height as needed */
+            fill: #EBC999; /* Set the shape's color */
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+           
+            position: absolute;
+            top: 150px; /* Adjust the top position as needed */
+            left: 550px; /* Place on the right side */
+            z-index: 1; /* Set z-index above the shape divider */
+            padding: 10px;  
+        }
+        .navbar a {
+            font-size: 24px;
+            font-weight: bold;
+            display: inline-block;
+            text-decoration: none;
+            color: #cd7700;
+            padding: 15px 10px;
+            font-family: 'Oswald',serif;
+        }
+
+        .navbar a:hover {
+            background-color: #4d3227;
+            color: white;
+            
+        }
+        #logo {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            left: 10px; /* Adjust the left position as needed */
+            width: 70px;
+            height: 70px;
+            z-index: 1; /* Set z-index above the shape divider */
+        }
+        #pic{
+            position : relative ;
+            top: 90px; /* Adjust the top position as needed */
+            left: 600px;
+            width: 200px;
+            height: 200px;
+        }
+        #info{
+            position : relative; 
+            font-family: 'oswald', serif;
+            font-size: 20px;
+            color: #EBC999;
+            text-align: justify;
+           
+            padding: 7px;
+            margin: 3px;
+            top: 430px;
+            left: 320px;
+            max-width: 750px;
+            border: 1px  #fff;
+            background-color: #4d3227;
+            box-shadow: 10px 19px 20px rgba(0, 0, 0, 0.2);
+        }
+
+
+</style>   
+<body>
+    <img src="LOGO.png" alt="Logo" id="logo">
+    <div class="custom-shape-divider-top-1696315512">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Project.html">Projects</a>
+        <a href="contact.html">Contact</a> 
+    </div>
+    <div>
+        <p id="info">
+                I'm an enthusiastic individual with a bachelor's degree in Information Technology 
+            and a lifelong passion for web development. My fascination with the digital world began in my teenage years when I discovered the art of creating websites. What started as a hobby has now evolved into a deep-seated aspiration to become a web developer.
+        </p>
+    </div>
+    <img src="img2.png" alt="Error" id="pic">
+
+</body>
+    
+
+</html>
