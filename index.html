@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+    <title>JASMINE</title>
+ </head>   
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent horizontal scrollbar due to shape divider */
+             background-color: rgba(77,50,39); /* Semi-transparent background*/
+        }
+
+        /* Custom Shape Divider Styles */
+        .custom-shape-divider-top-1696315512 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1; /* Place it behind other elements */
+        }
+
+        .custom-shape-divider-top-1696315512 svg {
+            width: 100%;
+            height: 325px; /* Adjust the height as needed */
+            fill: #EBC999; /* Set the shape's color */
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+           
+           position: absolute;
+           top: 150px; /* Adjust the top position as needed */
+           left: 550px; /* Place on the right side */
+           z-index: 1; /* Set z-index above the shape divider */
+           padding: 10px; 
+        }   
+        .navbar a {
+            font-size: 24px;
+            font-weight: bold;
+            display: inline-block;
+            text-decoration: none;
+            color: #cd7700;
+            padding: 15px 10px;
+            font-family: 'Oswald',serif;
+
+        }
+
+        .navbar a:hover {
+            background-color: #4d3227;
+            color: white;
+            
+        }
+
+        /* Logo Styles */
+        #logo {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            left: 10px; /* Adjust the left position as needed */
+            width: 70px;
+            height: 70px;
+            z-index: 1; /* Set z-index above the shape divider */
+        }
+        
+        /* Left-Side Text Styles */
+        .center-text {
+            position: absolute;
+            left: 650px; /* Adjust the left position as needed */
+            top: 40%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #EBC999;
+        }
+        .text-center{
+            position: absolute;
+            left: 450px; /* Adjust the left position as needed */
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 80px;
+            font-family: 'Oswald', sans-serif;
+            color: #EBC999;
+            text-shadow: 0 0 5px rgba(205,119,0)
+            , 0 0 15px rgba(205,119,0)
+            , 0 0 20px rgba(205,119,0)
+            ;
+            font-weight: bold;
+
+        }
+        .typing-effect {
+            position: absolute;
+            left: 570px; /* Adjust the left position as needed */
+            Top: 60%;
+            font-size: 24px;
+            font-family:'book antiqua';
+            white-space: nowrap;
+            overflow: hidden;
+            color: #EBC999; 
+           
+        }
+    </style>
+
+
+<body>
+    <!-- Custom Shape Divider -->
+    <div class="custom-shape-divider-top-1696315512">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="About.html">About</a>
+        <a href="Project.html">Projects</a>
+        <a href="contact.html">Contact</a> 
+    </div>
+
+    <!-- Logo -->
+    <img src="LOGO.png" alt="Logo" id="logo">
+
+    <!-- Left-Side Text -->
+    <div class="center-text">
+        <p style="font-family: 'Colus-Regular', serif;">Howdy!</p>
+    </div>
+    <div class="text-center">
+        <p >I'm J A S M I N E</p>
+    </div>
+
+    <div class="typing-effect">
+        <p id="text"></p>
+    </div>
+    <script>
+        const textElement = document.getElementById('text');
+        const texts = [
+            "Front-end Web Developer"
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < texts[textIndex].length) {
+                textElement.innerHTML += texts[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 50); 
+            } else {
+                setTimeout(erase, 1000); 
+            }
+        }
+        function erase() {
+            if (charIndex > 0) {
+                textElement.innerHTML = texts[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 25);
+               
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, 500); 
+            }
+        }
+        type();
+    </script>
+
+
+
+
+</body>
+</html>
